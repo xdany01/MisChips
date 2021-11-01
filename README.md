@@ -1,6 +1,3 @@
-# Base Vista
-###### Proyecto gulp que se puede utilizar como base para construir las vistas en el frontend.
-
 ## Comandos necesarios de npm
 
 `npm install` : Se utiliza para instalar las dependencias del package.json.
