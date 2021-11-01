@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/misEstilos.css">
+    <title>Cocinando en casa</title>
+</head>
+<body class="">
+<h3 class="text-center my-5">Ingrese los datos de la nueva receta</h3>
+<div class="d-flex justify-content-center pt-5 container-toast" aria-live="polite" aria-atomic="true">
+    <div class="container-toast__fila">
+        <div id="ingredienteRepetido" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true"
+             data-delay="3000">
+            <div class="toast-header">
+                <strong class="mr-auto">Cocinando en casa</strong>
+                <small>ahora</small>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="toast-body">
+                El ingrediente está repetido.
+            </div>
+        </div>
+        <div id="ingredienteVacio" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true"
+             data-delay="3000">
+            <div class="toast-header">
+                <strong class="mr-auto">Cocinando en casa</strong>
+                <small>ahora</small>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="toast-body">
+                Porfavor ingrese un ingrediente.
+            </div>
+        </div>
+    </div>
+</div>
+
+<main>
+    <form id="recetaGuardar" method="post" action="javascript:void(0)">
+        <input type="hidden" name="Ingredientes" id="ingredientesOcultos">
+        <div class="form-group">
+            <label for="Nombre">Nombre</label>
+            <input name="Nombre" id="Nombre" type="text" class="form-control" placeholder="Nombre"
+                   autocomplete="off">
+        </div>
+        <div class="form-group">
+            <label for="Tipo">Tipo</label>
+            <select class="form-control" id="Tipo">
+                <option></option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="Tiempo">Tiempo</label>
+            <input name="Tiempo" id="Tiempo" type="number" min="1" step="1" class="form-control"
+                   placeholder="Tiempo de coccion en min."
+                   autocomplete="off">
+        </div>
+        <div class="form-group">
+            <label for="txt">Ingredientes</label>
+            <div class="chips">
+                <div class="row">
+                    <div class="col">
+                        <ul id="list"></ul>
+                    </div>
+                </div>
+            </div>
+            <input type="text" class="form-control" id="txt" aria-describedby="emailHelp"
+                   placeholder="Ingrese un ingrediente y presioné enter" autocomplete="off">
+        </div>
+        <div class="form-group">
+            <label for="Descripcion">Descripcion</label>
+            <textarea class="form-control" id="Descripcion" rows="3"></textarea>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary btn-block">Guardar</button>
+        </div>
+    </form>
+
+</main>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
+<script src="js/all.js"></script>
+</body>
+</html>
