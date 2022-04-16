@@ -13,7 +13,7 @@ const focusEle = (element) => {
 }
 const remove = (i) => {
     items = items.filter(item => items.indexOf(item) !== i);
-    render();
+    render(varianteColor);
     focusEle('input[data-dn-input-text]');
 }
 const chip = (item, index, style) => {
