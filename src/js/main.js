@@ -1,6 +1,27 @@
 let items = [];
 let list = document.getElementById('list');
 let ingredientesOcultos = document.getElementById('ingredientesOcultos');
+const variantes = {
+    'gray': 'gray',
+    'trueGray': 'true-gray',
+    'blueGray': 'blue-gray',
+    'rose': 'rose',
+    'red': 'red',
+    'pink': 'pink',
+    'teal': 'teal',
+    'emerald': 'emerald',
+    'green': 'green',
+    'lime': 'lime',
+    'yellow': 'yellow',
+    'amber': 'amber',
+    'blue': 'blue',
+    'lightBlue': 'light-blue',
+    'cyan': 'cyan',
+    'indigo': 'indigo',
+    'fuchsia': 'fuchsia',
+    'purple': 'purple',
+    'violet': 'violet'
+}
 
 const ready = function (cb) {
     document.readyState === "loading" ? document.addEventListener("DOMContentLoaded", function (e) {
@@ -40,7 +61,7 @@ const showAlert = (adjacent, msj, tipo) => {
 const render = () => {
     list.innerHTML = '';
     items.map((item, index) => {
-        list.innerHTML += chip(item, index, 'green');
+        list.innerHTML += chip(item, index, variantes.green);
     });
     ingredientesOcultos.value = items.toString();
     list.insertAdjacentHTML('beforeend', `<li class="d-inline-block"><input autocomplete="off" class="input-txt" id="txt" type="text"></li>`);
