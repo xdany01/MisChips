@@ -2,57 +2,24 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="favicon.ico" rel="icon" type="image/x-icon"/>
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
           integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/misEstilos.css">
+          referrerpolicy="no-referrer" rel="stylesheet"/>
+    <link href="css/main.css" rel="stylesheet">
     <title>Cocinando en casa</title>
 </head>
 <body class="">
 <h3 class="text-center my-5">Ingrese los datos de la nueva receta</h3>
-<div class="d-flex justify-content-center pt-5 container-toast" aria-live="polite" aria-atomic="true">
-    <div class="container-toast__fila">
-        <div id="ingredienteRepetido" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true"
-             data-delay="3000">
-            <div class="toast-header">
-                <strong class="mr-auto">Cocinando en casa</strong>
-                <small>ahora</small>
-                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="toast-body">
-                El ingrediente está repetido.
-            </div>
-        </div>
-        <div id="ingredienteVacio" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true"
-             data-delay="3000">
-            <div class="toast-header">
-                <strong class="mr-auto">Cocinando en casa</strong>
-                <small>ahora</small>
-                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="toast-body">
-                Porfavor ingrese un ingrediente.
-            </div>
-        </div>
-    </div>
-</div>
-
-<main>
-    <form id="recetaGuardar" method="post" action="javascript:void(0)">
-        <input type="hidden" name="Ingredientes" id="ingredientesOcultos">
+<main class="container">
+    <form action="javascript:void(0)" class="row w-50" id="recetaGuardar" method="post">
         <div class="form-group">
             <label for="Nombre">Nombre</label>
-            <input name="Nombre" id="Nombre" type="text" class="form-control" placeholder="Nombre"
-                   autocomplete="off">
+            <input autocomplete="off" class="form-control" id="Nombre" name="Nombre" placeholder="Nombre"
+                   type="text">
         </div>
         <div class="form-group">
             <label for="Tipo">Tipo</label>
@@ -67,35 +34,103 @@
         </div>
         <div class="form-group">
             <label for="Tiempo">Tiempo</label>
-            <input name="Tiempo" id="Tiempo" type="number" min="1" step="1" class="form-control"
+            <input autocomplete="off" class="form-control" id="Tiempo" min="1" name="Tiempo"
                    placeholder="Tiempo de coccion en min."
-                   autocomplete="off">
+                   step="1"
+                   type="number">
         </div>
         <div class="form-group">
             <label for="txt">Ingredientes</label>
-            <div class="chips" >
+            <input id="ingredientesOcultos" name="Ingredientes" type="hidden">
+            <div class="container-fluid px-08">
                 <div class="row">
-                    <div class="col">
-                        <ul id="list"></ul>
+                    <div class="col form-control px-035 d-flex flex-wrap" id="dnFormControl">
+                        <ul id="list">
+                            <li class="d-inline-block"><input autocomplete="off" class="input-txt" id="txt" type="text"></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <input type="text" class="form-control" id="txt" aria-describedby="emailHelp"
-                   placeholder="Ingrese un ingrediente y presioné enter" autocomplete="off">
         </div>
         <div class="form-group">
             <label for="Descripcion">Descripcion</label>
             <textarea class="form-control" id="Descripcion" rows="3"></textarea>
         </div>
-        <div class="d-flex justify-content-center">
-            <button type="submit" class="btn btn-primary btn-block">Guardar</button>
+        <div class="d-flex justify-content-center mt-3">
+            <button class="btn btn-primary btn-block" type="submit">Guardar</button>
         </div>
     </form>
-
 </main>
 
-<script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.bundle.js"></script>
-<script src="js/all.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="favicon.ico" rel="icon" type="image/x-icon"/>
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+          referrerpolicy="no-referrer" rel="stylesheet"/>
+    <link href="css/main.css" rel="stylesheet">
+    <title>Cocinando en casa</title>
+</head>
+<body class="">
+<h3 class="text-center my-5">Ingrese los datos de la nueva receta</h3>
+<main class="container">
+    <form action="javascript:void(0)" class="row w-50" id="recetaGuardar" method="post">
+        <div class="form-group">
+            <label for="Nombre">Nombre</label>
+            <input autocomplete="off" class="form-control" id="Nombre" name="Nombre" placeholder="Nombre"
+                   type="text">
+        </div>
+        <div class="form-group">
+            <label for="Tipo">Tipo</label>
+            <select class="form-control" id="Tipo">
+                <option></option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="Tiempo">Tiempo</label>
+            <input autocomplete="off" class="form-control" id="Tiempo" min="1" name="Tiempo"
+                   placeholder="Tiempo de coccion en min."
+                   step="1"
+                   type="number">
+        </div>
+        <div class="form-group">
+            <label for="txt">Ingredientes</label>
+            <input id="ingredientesOcultos" name="Ingredientes" type="hidden">
+            <div class="container-fluid px-08">
+                <div class="row">
+                    <div class="col form-control px-035 d-flex flex-wrap" id="dnFormControl">
+                        <ul id="list">
+                            <li class="d-inline-block"><input autocomplete="off" class="input-txt" id="txt" type="text"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Descripcion">Descripcion</label>
+            <textarea class="form-control" id="Descripcion" rows="3"></textarea>
+        </div>
+        <div class="d-flex justify-content-center mt-3">
+            <button class="btn btn-primary btn-block" type="submit">Guardar</button>
+        </div>
+    </form>
+</main>
+
+<script src="js/bootstrap.bundle.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
