@@ -35,10 +35,11 @@ gulp.task('babel', () => {
     return gulp.src(path.js.sour)
         .pipe(sourcemaps.init())
         .pipe(babel({
-            presets: ['@babel/env']
+            presets: ['@babel/preset-modules'],
+            plugins: ['@babel/transform-runtime'],
         }))
         .pipe(terser())
-        .pipe(concat('all.js'))
+        // .pipe(concat('all.js'))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(path.js.dest))
         .pipe(browserSync.stream({match: path.js.dest}))
@@ -108,3 +109,4 @@ gulp.task('serve', function () {
 })
 
 gulp.task('default', gulp.series('serve'))
+
