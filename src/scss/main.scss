@@ -193,18 +193,6 @@ $violet-700: #6d28d9;
 $violet-800: #5b21b6;
 $violet-900: #4c1d95;
 
-main {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
 .container {
   ul {
     list-style: none;
@@ -216,6 +204,13 @@ main {
 
     li {
       &:not(li:last-child) {
+        padding: 4px 6px 4px 10px;
+        border-radius: 15px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        user-select: none;
+
         &.emerald {
           background-image: linear-gradient(0deg, $emerald-300 0%, $emerald-200 100%);
           color: $emerald-800;
@@ -500,13 +495,6 @@ main {
             }
           }
         }
-
-        padding: 4px 6px 4px 10px;
-        border-radius: 15px;
-        margin-right: 5px;
-        margin-bottom: 5px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-        user-select: none;
 
         a {
           text-decoration: none;
