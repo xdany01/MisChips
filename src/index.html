@@ -13,52 +13,375 @@
     <title>Cocinando en casa</title>
 </head>
 <body class="">
-<h3 class="text-center my-5">Ingrese los datos de la nueva receta</h3>
-<main class="container">
-    <form action="javascript:void(0)" class="row w-50" id="recetaGuardar" method="post">
+<main class="container d-flex justify-content-center flex-column">
+    <!-- Variantes de color posibles: -->
+    <!-- gray,true-gray,blue-gray,rose,red,pink,teal,emerald,green,lime,yellow,amber,blue,light-blue,cyan,indigo,fuchsia,purple,violet -->
+    <div class="row">
+        <h3 class="text-center my-5">Mis Chips</h3>
+    </div>
+    <form action="javascript:void(0)" class="row" id="recetaGuardar" method="post">
         <div class="form-group">
-            <label for="Nombre">Nombre</label>
-            <input autocomplete="off" class="form-control" id="Nombre" name="Nombre" placeholder="Nombre"
-                   type="text">
-        </div>
-        <div class="form-group">
-            <label for="Tipo">Tipo</label>
-            <select class="form-control" id="Tipo">
-                <option></option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="Tiempo">Tiempo</label>
-            <input autocomplete="off" class="form-control" id="Tiempo" min="1" name="Tiempo"
-                   placeholder="Tiempo de coccion en min."
-                   step="1"
-                   type="number">
-        </div>
-        <div class="form-group">
-            <!-- Variantes de color posibles:
-            gray,true-gray,blue-gray,rose,red,pink,teal,emerald,green,lime,yellow,amber,blue,light-blue,cyan,indigo,fuchsia,purple,violet
-            -->
-            <input data-dn-color="indigo" data-dn-items-ocultos="itemsOcultos" name="Ingredientes" type="hidden">
-            <label>Ingredientes</label>
+            <input data-dn-color="gray" data-dn-items-ocultos="ingredientes" name="ingredientes" type="hidden">
+            <label data-dn-label="ingredientes">Chips gray</label>
             <div class="container px-08">
                 <div class="row">
-                    <div class="col form-control px-035 d-flex flex-wrap" data-dn-form-control="dnFormControl">
-                        <ul data-dn-list-items="list">
-                            <li class="d-inline-block"><input autocomplete="off" class="input-txt"
-                                                              data-dn-input-text="txt" type="text"></li>
+                    <div class="col form-control px-035 d-flex flex-wrap overflow-auto"
+                         data-dn-form-control="ingredientes">
+                        <ul data-dn-list-items="ingredientes">
+                            <li class="d-inline-block align-items-center">
+                                <input autocomplete="off"
+                                       class="input-txt"
+                                       data-dn-input-text="ingredientes"
+                                       type="text">
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
         <div class="form-group">
-            <label for="Descripcion">Descripcion</label>
-            <textarea class="form-control" id="Descripcion" rows="3"></textarea>
+            <input data-dn-color="true-gray" data-dn-items-ocultos="ingredientes2" name="ingredientes2" type="hidden">
+            <label data-dn-label="ingredientes2">Chips true-gray</label>
+            <div class="container px-08">
+                <div class="row">
+                    <div class="col form-control px-035 d-flex flex-wrap overflow-auto"
+                         data-dn-form-control="ingredientes2">
+                        <ul data-dn-list-items="ingredientes2">
+                            <li class="d-inline-block align-items-center">
+                                <input autocomplete="off"
+                                       class="input-txt"
+                                       data-dn-input-text="ingredientes2"
+                                       type="text">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <input data-dn-color="blue-gray" data-dn-items-ocultos="ingredientes3" name="ingredientes3" type="hidden">
+            <label data-dn-label="ingredientes3">Chips blue-gray</label>
+            <div class="container px-08">
+                <div class="row">
+                    <div class="col form-control px-035 d-flex flex-wrap overflow-auto"
+                         data-dn-form-control="ingredientes3">
+                        <ul data-dn-list-items="ingredientes3">
+                            <li class="d-inline-block align-items-center">
+                                <input autocomplete="off"
+                                       class="input-txt"
+                                       data-dn-input-text="ingredientes3"
+                                       type="text">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <input data-dn-color="rose" data-dn-items-ocultos="ingredientes4" name="ingredientes4" type="hidden">
+            <label data-dn-label="ingredientes4">Chips rose</label>
+            <div class="container px-08">
+                <div class="row">
+                    <div class="col form-control px-035 d-flex flex-wrap overflow-auto"
+                         data-dn-form-control="ingredientes4">
+                        <ul data-dn-list-items="ingredientes4">
+                            <li class="d-inline-block align-items-center">
+                                <input autocomplete="off"
+                                       class="input-txt"
+                                       data-dn-input-text="ingredientes4"
+                                       type="text">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <input data-dn-color="red" data-dn-items-ocultos="ingredientes5" name="ingredientes5" type="hidden">
+            <label data-dn-label="ingredientes5">Chips red</label>
+            <div class="container px-08">
+                <div class="row">
+                    <div class="col form-control px-035 d-flex flex-wrap overflow-auto"
+                         data-dn-form-control="ingredientes5">
+                        <ul data-dn-list-items="ingredientes5">
+                            <li class="d-inline-block align-items-center">
+                                <input autocomplete="off"
+                                       class="input-txt"
+                                       data-dn-input-text="ingredientes5"
+                                       type="text">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <input data-dn-color="pink" data-dn-items-ocultos="ingredientes6" name="ingredientes6" type="hidden">
+            <label data-dn-label="ingredientes6">Chips pink</label>
+            <div class="container px-08">
+                <div class="row">
+                    <div class="col form-control px-035 d-flex flex-wrap overflow-auto"
+                         data-dn-form-control="ingredientes6">
+                        <ul data-dn-list-items="ingredientes6">
+                            <li class="d-inline-block align-items-center">
+                                <input autocomplete="off"
+                                       class="input-txt"
+                                       data-dn-input-text="ingredientes6"
+                                       type="text">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <input data-dn-color="teal" data-dn-items-ocultos="ingredientes7" name="ingredientes7" type="hidden">
+            <label data-dn-label="ingredientes7">Chips teal</label>
+            <div class="container px-08">
+                <div class="row">
+                    <div class="col form-control px-035 d-flex flex-wrap overflow-auto"
+                         data-dn-form-control="ingredientes7">
+                        <ul data-dn-list-items="ingredientes7">
+                            <li class="d-inline-block align-items-center">
+                                <input autocomplete="off"
+                                       class="input-txt"
+                                       data-dn-input-text="ingredientes7"
+                                       type="text">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <input data-dn-color="emerald" data-dn-items-ocultos="ingredientes8" name="ingredientes8" type="hidden">
+            <label data-dn-label="ingredientes8">Chips emerald</label>
+            <div class="container px-08">
+                <div class="row">
+                    <div class="col form-control px-035 d-flex flex-wrap overflow-auto"
+                         data-dn-form-control="ingredientes8">
+                        <ul data-dn-list-items="ingredientes8">
+                            <li class="d-inline-block align-items-center">
+                                <input autocomplete="off"
+                                       class="input-txt"
+                                       data-dn-input-text="ingredientes8"
+                                       type="text">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <input data-dn-color="green" data-dn-items-ocultos="ingredientes9" name="ingredientes9" type="hidden">
+            <label data-dn-label="ingredientes9">Chips green</label>
+            <div class="container px-08">
+                <div class="row">
+                    <div class="col form-control px-035 d-flex flex-wrap overflow-auto"
+                         data-dn-form-control="ingredientes9">
+                        <ul data-dn-list-items="ingredientes9">
+                            <li class="d-inline-block align-items-center">
+                                <input autocomplete="off"
+                                       class="input-txt"
+                                       data-dn-input-text="ingredientes9"
+                                       type="text">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <input data-dn-color="lime" data-dn-items-ocultos="ingredientes10" name="ingredientes10" type="hidden">
+            <label data-dn-label="ingredientes10">Chips lime</label>
+            <div class="container px-08">
+                <div class="row">
+                    <div class="col form-control px-035 d-flex flex-wrap overflow-auto"
+                         data-dn-form-control="ingredientes10">
+                        <ul data-dn-list-items="ingredientes10">
+                            <li class="d-inline-block align-items-center">
+                                <input autocomplete="off"
+                                       class="input-txt"
+                                       data-dn-input-text="ingredientes10"
+                                       type="text">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <input data-dn-color="yellow" data-dn-items-ocultos="ingredientes11" name="ingredientes11" type="hidden">
+            <label data-dn-label="ingredientes11">Chips yellow</label>
+            <div class="container px-08">
+                <div class="row">
+                    <div class="col form-control px-035 d-flex flex-wrap overflow-auto"
+                         data-dn-form-control="ingredientes11">
+                        <ul data-dn-list-items="ingredientes11">
+                            <li class="d-inline-block align-items-center">
+                                <input autocomplete="off"
+                                       class="input-txt"
+                                       data-dn-input-text="ingredientes11"
+                                       type="text">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <input data-dn-color="amber" data-dn-items-ocultos="ingredientes12" name="ingredientes12" type="hidden">
+            <label data-dn-label="ingredientes12">Chips amber</label>
+            <div class="container px-08">
+                <div class="row">
+                    <div class="col form-control px-035 d-flex flex-wrap overflow-auto"
+                         data-dn-form-control="ingredientes12">
+                        <ul data-dn-list-items="ingredientes12">
+                            <li class="d-inline-block align-items-center">
+                                <input autocomplete="off"
+                                       class="input-txt"
+                                       data-dn-input-text="ingredientes12"
+                                       type="text">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <input data-dn-color="blue" data-dn-items-ocultos="ingredientes13" name="ingredientes13" type="hidden">
+            <label data-dn-label="ingredientes13">Chips blue</label>
+            <div class="container px-08">
+                <div class="row">
+                    <div class="col form-control px-035 d-flex flex-wrap overflow-auto"
+                         data-dn-form-control="ingredientes13">
+                        <ul data-dn-list-items="ingredientes13">
+                            <li class="d-inline-block align-items-center">
+                                <input autocomplete="off"
+                                       class="input-txt"
+                                       data-dn-input-text="ingredientes13"
+                                       type="text">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <input data-dn-color="light-blue" data-dn-items-ocultos="ingredientes14" name="ingredientes14"
+                   type="hidden">
+            <label data-dn-label="ingredientes14">Chips light-blue</label>
+            <div class="container px-08">
+                <div class="row">
+                    <div class="col form-control px-035 d-flex flex-wrap overflow-auto"
+                         data-dn-form-control="ingredientes14">
+                        <ul data-dn-list-items="ingredientes14">
+                            <li class="d-inline-block align-items-center">
+                                <input autocomplete="off"
+                                       class="input-txt"
+                                       data-dn-input-text="ingredientes14"
+                                       type="text">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <input data-dn-color="cyan" data-dn-items-ocultos="ingredientes15" name="ingredientes15"
+                   type="hidden">
+            <label data-dn-label="ingredientes15">Chips cyan</label>
+            <div class="container px-08">
+                <div class="row">
+                    <div class="col form-control px-035 d-flex flex-wrap overflow-auto"
+                         data-dn-form-control="ingredientes15">
+                        <ul data-dn-list-items="ingredientes15">
+                            <li class="d-inline-block align-items-center">
+                                <input autocomplete="off"
+                                       class="input-txt"
+                                       data-dn-input-text="ingredientes15"
+                                       type="text">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <input data-dn-color="indigo" data-dn-items-ocultos="ingredientes16" name="ingredientes16" type="hidden">
+            <label data-dn-label="ingredientes16">Chips indigo</label>
+            <div class="container px-08">
+                <div class="row">
+                    <div class="col form-control px-035 d-flex flex-wrap overflow-auto"
+                         data-dn-form-control="ingredientes16">
+                        <ul data-dn-list-items="ingredientes16">
+                            <li class="d-inline-block align-items-center">
+                                <input autocomplete="off"
+                                       class="input-txt"
+                                       data-dn-input-text="ingredientes16"
+                                       type="text">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <input data-dn-color="fuchsia" data-dn-items-ocultos="ingredientes17" name="ingredientes17" type="hidden">
+            <label data-dn-label="ingredientes17">Chips fuchsia</label>
+            <div class="container px-08">
+                <div class="row">
+                    <div class="col form-control px-035 d-flex flex-wrap overflow-auto"
+                         data-dn-form-control="ingredientes17">
+                        <ul data-dn-list-items="ingredientes17">
+                            <li class="d-inline-block align-items-center">
+                                <input autocomplete="off"
+                                       class="input-txt"
+                                       data-dn-input-text="ingredientes17"
+                                       type="text">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <input data-dn-color="purple" data-dn-items-ocultos="ingredientes18" name="ingredientes18" type="hidden">
+            <label data-dn-label="ingredientes18">Chips purple</label>
+            <div class="container px-08">
+                <div class="row">
+                    <div class="col form-control px-035 d-flex flex-wrap overflow-auto"
+                         data-dn-form-control="ingredientes18">
+                        <ul data-dn-list-items="ingredientes18">
+                            <li class="d-inline-block align-items-center">
+                                <input autocomplete="off"
+                                       class="input-txt"
+                                       data-dn-input-text="ingredientes18"
+                                       type="text">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <input data-dn-color="violet" data-dn-items-ocultos="ingredientes19" name="ingredientes19" type="hidden">
+            <label data-dn-label="ingredientes19">Chips violet</label>
+            <div class="container px-08">
+                <div class="row">
+                    <div class="col form-control px-035 d-flex flex-wrap overflow-auto"
+                         data-dn-form-control="ingredientes19">
+                        <ul data-dn-list-items="ingredientes19">
+                            <li class="d-inline-block align-items-center">
+                                <input autocomplete="off"
+                                       class="input-txt"
+                                       data-dn-input-text="ingredientes19"
+                                       type="text">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="d-flex justify-content-center mt-3">
             <button class="btn btn-primary btn-block" type="submit">Guardar</button>
